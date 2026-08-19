@@ -1,0 +1,28 @@
+{
+  "time": {
+    "hour": 10,
+    "minute": 59,
+    "second": 50
+  },
+  "accounts": [
+    {
+      "email": "account1@example.com",
+      "password": "your-password",
+      "proxy": null,
+      "scout": true,
+      "product_ids": [
+        411
+      ]
+    },
+    {
+      "email": "account2@example.com",
+      "password": "your-password",
+      "proxy": "http://user:pass@host:port",
+      "scout": false,
+      "product_ids": [
+        412,
+        413
+      ]
+    }
+  ]
+}

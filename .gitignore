@@ -1,0 +1,24 @@
+# Реальные креды аккаунтов — см. config.example.json для шаблона
+config.json
+
+# История запусков бота (локальные данные)
+history.jsonl
+
+# Черновые референс-файлы с сайта (не нужны для работы приложения)
+site/
+api.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Сборки (PyInstaller и т.п.)
+build/
+dist/
+*.spec
+
+# IDE / OS
+.vscode/
+.claude/
+.DS_Store
+Thumbs.db

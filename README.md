@@ -32,13 +32,7 @@
 
 ## Быстрый старт
 
-<table>
-<tr>
-<th width="50%">Linux / macOS</th>
-<th width="50%">Windows (PowerShell)</th>
-</tr>
-<tr>
-<td valign="top">
+**Linux / macOS**
 
 ```bash
 git clone https://github.com/loxDesire/f-ariel_autobuy.git
@@ -47,8 +41,7 @@ bash setup.sh
 venv/bin/python run_tui.py
 ```
 
-</td>
-<td valign="top">
+**Windows (PowerShell)**
 
 ```powershell
 git clone https://github.com/loxDesire/f-ariel_autobuy.git
@@ -60,13 +53,9 @@ copy .env.example .env
 venv\Scripts\python run_tui.py
 ```
 
-</td>
-</tr>
-</table>
-
 Нужен Python 3.10+. `setup.sh` создаёт `venv/`, ставит зависимости и создаёт
 `config.json` и `.env` из шаблонов — на Windows то же самое делают команды
-справа. На Windows интерфейс лучше всего выглядит в **Windows Terminal**.
+выше. На Windows интерфейс лучше всего выглядит в **Windows Terminal**.
 
 Дальше в интерфейсе: **Аккаунты** → добавить аккаунт и товары → **Настройки** →
 время дропа → **Запуск** → выбрать режим → **Старт** (`s`).

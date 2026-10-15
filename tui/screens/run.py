@@ -112,7 +112,7 @@ class RunPane(Vertical):
         uptime = ""
         if running and self.started_at:
             el = int(now - self.started_at)
-            uptime = f"  {el // 60:02d}:{el % 60:02d}"
+            uptime = f" · {el // 60:02d}:{el % 60:02d}"
         c = self.counters
         self.query_one("#status-text", Static).update(
             f"{state}{uptime}\n"
@@ -192,11 +192,12 @@ class RunPane(Vertical):
         except Exception as e:
             self._write("err", "", f"Не удалось запустить бота: {type(e).__name__}: {e}")
         finally:
-            self.query_one("#start", Button).disabled = False
-            self.query_one("#stop", Button).disabled = True
-            self.query_one("#mode", RadioSet).disabled = False
             self.started_at = None
-            self.app.refresh_history()
+            if self.is_attached:  # TUI могли закрыть, пока бот работал — виджетов уже нет
+                self.query_one("#start", Button).disabled = False
+                self.query_one("#stop", Button).disabled = True
+                self.query_one("#mode", RadioSet).disabled = False
+                self.app.refresh_history()
 
     def _on_bot_line(self, kind: str, ts: str, text: str):
         if kind == "req":

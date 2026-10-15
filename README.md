@@ -32,12 +32,41 @@
 
 ## Быстрый старт
 
+<table>
+<tr>
+<th width="50%">Linux / macOS</th>
+<th width="50%">Windows (PowerShell)</th>
+</tr>
+<tr>
+<td valign="top">
+
 ```bash
 git clone https://github.com/loxDesire/f-ariel_autobuy.git
 cd f-ariel_autobuy
-bash setup.sh                 # venv + зависимости + config.json и .env из шаблонов
-venv/bin/python run_tui.py    # интерфейс
+bash setup.sh
+venv/bin/python run_tui.py
 ```
+
+</td>
+<td valign="top">
+
+```powershell
+git clone https://github.com/loxDesire/f-ariel_autobuy.git
+cd f-ariel_autobuy
+python -m venv venv
+venv\Scripts\pip install -r requirements.txt
+copy config.example.json config.json
+copy .env.example .env
+venv\Scripts\python run_tui.py
+```
+
+</td>
+</tr>
+</table>
+
+Нужен Python 3.10+. `setup.sh` создаёт `venv/`, ставит зависимости и создаёт
+`config.json` и `.env` из шаблонов — на Windows то же самое делают команды
+справа. На Windows интерфейс лучше всего выглядит в **Windows Terminal**.
 
 Дальше в интерфейсе: **Аккаунты** → добавить аккаунт и товары → **Настройки** →
 время дропа → **Запуск** → выбрать режим → **Старт** (`s`).
@@ -296,25 +325,6 @@ venv/bin/python run_tui.py
 
 Вход на сервер без пароля — по ssh-ключу: один раз выполните
 `ssh-copy-id root@<ip-сервера>` в обычном терминале.
-
-</details>
-
-<details>
-<summary><b>Windows</b></summary>
-
-<br>
-
-`setup.sh` — для Linux/macOS. На Windows (PowerShell):
-
-```powershell
-python -m venv venv
-venv\Scripts\pip install -r requirements.txt
-copy config.example.json config.json
-copy .env.example .env
-venv\Scripts\python run_tui.py
-```
-
-Лучше всего интерфейс выглядит в **Windows Terminal**.
 
 </details>
 

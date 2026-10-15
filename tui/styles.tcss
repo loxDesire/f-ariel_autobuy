@@ -56,7 +56,7 @@ DataTable { height: 1fr; border: round $primary 50%; }
 SettingsPane Input { width: 70; }
 .input-row Input { width: 52; }
 .time-row { height: auto; }
-.time-row Input { width: 8; }
+.time-row Input { width: 10; padding: 0 1; }
 .switch-row { height: auto; }
 #s-mode { width: 40; }
 

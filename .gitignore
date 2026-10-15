@@ -1,6 +1,10 @@
 # Реальные креды аккаунтов — см. config.example.json для шаблона
 config.json
 
+# Секреты Telegram (токен, chat id, адрес Worker) — шаблон .env.example
+.env
+*.tmp
+
 # История запусков бота (локальные данные)
 history.jsonl
 
@@ -12,10 +16,9 @@ api.json
 __pycache__/
 *.pyc
 
-# Сборки (PyInstaller и т.п.)
-build/
-dist/
-*.spec
+# Окружение — создаётся через setup.sh из requirements.txt
+venv/
+.venv/
 
 # IDE / OS
 .vscode/

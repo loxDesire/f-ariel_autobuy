@@ -10,11 +10,6 @@
   POST /api/v1/delivery/select   {"type": ..., "identifier": ...} (подтверждено
        трейсом тела запроса — байт в байт совпадает с Content-Length: 50)
 """
-import os
-import sys
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 import aiohttp
 from run_fast import Account
 
